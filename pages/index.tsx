@@ -6,11 +6,17 @@ import { JobIndex } from "../modules/job/index";
 import { PayIndex } from "../modules/pay/index";
 import { RecipesIndex } from "../modules/recipes/index";
 import { Nav } from "../components/Nav";
+import { LoginIndex } from "../modules/login/index";
+import { RegisterIndex } from "../modules/register/index";
 
 // style
 import { MainSection, Section, BlankSpace } from "../styles/index";
+import { useState } from "react";
 
 export default function Home() {
+  const [showLogin, setShowLogin] = useState(false);
+  const [showRegister, setShowRegister] = useState(true);
+
   return (
     <>
       <Head>
@@ -27,9 +33,10 @@ export default function Home() {
           <RecipesIndex />
           <JobIndex />
           <BlankSpace />
+          {showRegister && <RegisterIndex />}
+          {showLogin && <LoginIndex />}
         </Section>
       </MainSection>
-      <footer></footer>
     </>
   );
 }

@@ -1,5 +1,6 @@
-// style
 import { FC } from "react";
+
+// style
 import { HeadingSection, HeadingText } from "../styles/components/heading";
 
 interface IHeading {

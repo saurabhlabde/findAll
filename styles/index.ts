@@ -9,12 +9,13 @@ export const MainSection = styled.main`
   overflow: hidden;
   overflow-y: scroll;
   flex-direction: column;
+  position: relative;
+
 `;
 
 export const Section = styled.section`
   width: 40vw;
   height: 100%;
-  position: relative;
   background-color: ${(props) => props.theme.primary};
 `;
 

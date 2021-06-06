@@ -1,5 +1,6 @@
-// style
 import { FC } from "react";
+
+// style
 import { ButtonSection, ButtonSy } from "../styles/components/button";
 
 interface IButton {

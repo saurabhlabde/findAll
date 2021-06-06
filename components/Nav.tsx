@@ -2,7 +2,6 @@
 import { Button } from "../components/Button";
 
 // style
-
 import {
   NavSection,
   LeftSection,

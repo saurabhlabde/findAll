@@ -1,4 +1,4 @@
-import { Dispatch, FC, SetStateAction } from "react";
+import { FC } from "react";
 
 // style
 import { InputSection, InputSy } from "../styles/components/input";
@@ -18,7 +18,7 @@ export const Input: FC<IInput> = ({
 }) => {
   return (
     <>
-      <InputSection>
+      <InputSection className="input">
         <InputSy
           value={value}
           name={name}
