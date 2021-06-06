@@ -49,7 +49,7 @@ export const PayIndex = () => {
 
           <BalanceCard
             heading={"Total balance"}
-            buttonName="HISTORY"
+            buttonName="VIEW HISTORY"
             balance={balance}
             onButtonClick={sendPayHandel}
           />

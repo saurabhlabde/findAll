@@ -11,7 +11,7 @@ interface IButton {
 export const Button: FC<IButton> = ({ buttonName, onClick, retunValue }) => {
   return (
     <>
-      <ButtonSection>
+      <ButtonSection className="button">
         <ButtonSy
           onClick={() => {
             onClick ? onClick(retunValue) : undefined;

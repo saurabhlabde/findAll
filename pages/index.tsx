@@ -5,9 +5,10 @@ import { FoodIndex } from "../modules/food/index";
 import { JobIndex } from "../modules/job/index";
 import { PayIndex } from "../modules/pay/index";
 import { RecipesIndex } from "../modules/recipes/index";
+import { Nav } from "../components/Nav";
 
 // style
-import { MainSection, Section } from "../styles/index";
+import { MainSection, Section, BlankSpace } from "../styles/index";
 
 export default function Home() {
   return (
@@ -20,13 +21,14 @@ export default function Home() {
 
       <MainSection>
         <Section>
+          <Nav />
           <PayIndex />
           <FoodIndex />
           <RecipesIndex />
           <JobIndex />
+          <BlankSpace />
         </Section>
       </MainSection>
-
       <footer></footer>
     </>
   );
