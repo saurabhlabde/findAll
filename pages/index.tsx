@@ -6,6 +6,9 @@ import { JobIndex } from "../modules/job/index";
 import { PayIndex } from "../modules/pay/index";
 import { RecipesIndex } from "../modules/recipes/index";
 
+// style
+import { MainSection, Section } from "../styles/index";
+
 export default function Home() {
   return (
     <>
@@ -15,7 +18,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main></main>
+      <MainSection>
+        <Section>
+          <PayIndex />
+          <FoodIndex />
+          <RecipesIndex />
+          <JobIndex />
+        </Section>
+      </MainSection>
 
       <footer></footer>
     </>
