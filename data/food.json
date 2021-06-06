@@ -1,0 +1,23 @@
+[
+  {
+    "id": "471690bf-03cc-425a-acd8-d38d6d6d5cba",
+    "media": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F37%2F2020%2F03%2FRU229276.jpg&w=200&c=sc&poi=face&q=85",
+    "title": "Braised Chickpeas",
+    "category": "Boil",
+    "schedule": "11am - 11pm"
+  },
+  {
+    "id": "e7d8593b-f4ff-4c59-9d40-494d37d5ab07",
+    "media": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F37%2F2020%2F03%2FR166384.jpg&w=200&c=sc&poi=face&q=85",
+    "title": "Pesto Chicken Sandwiches",
+    "category": "Fast food",
+    "schedule": "11am - 7pm"
+  },
+  {
+    "id": "f7890b98-38dc-414f-a51b-8f5d2bd94bfd",
+    "media": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F37%2F2020%2F03%2FRU260165.jpg&w=200&c=sc&poi=face&q=85",
+    "title": "Peach Graham",
+    "category": "Dissert",
+    "schedule": "4pm - 11pm"
+  }
+]

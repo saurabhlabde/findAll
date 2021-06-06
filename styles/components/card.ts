@@ -53,14 +53,17 @@ export const ButtonSection = styled.div`
 
 export const Heading = styled.h1`
   color: ${(props) => props.theme.t_primary};
-  font-size: 1em;
+  font-size: 0.9em;
   margin-top: 0.2rem;
+  white-space: nowrap;
 `;
 
 export const SubHeading = styled.h2`
   color: ${(props) => props.theme.t_secondary};
   font-size: 0.85em;
   margin-top: 0.3rem;
+  white-space: nowrap;
+
 `;
 
 export const SubSubHeading = styled.h3`
@@ -68,4 +71,5 @@ export const SubSubHeading = styled.h3`
   font-size: 0.8em;
   padding-right: 1rem;
   padding-left: 0.5rem;
+  white-space: nowrap;
 `;

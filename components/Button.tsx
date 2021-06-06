@@ -4,14 +4,19 @@ import { ButtonSection, ButtonSy } from "../styles/components/button";
 
 interface IButton {
   buttonName: string;
-  onClick: (e?: any) => void;
+  retunValue?: string;
+  onClick: (rv: any) => void;
 }
 
-export const Button: FC<IButton> = ({ buttonName, onClick }) => {
+export const Button: FC<IButton> = ({ buttonName, onClick, retunValue }) => {
   return (
     <>
       <ButtonSection>
-        <ButtonSy onClick={onClick ? onClick : undefined}>
+        <ButtonSy
+          onClick={() => {
+            onClick ? onClick(retunValue) : undefined;
+          }}
+        >
           {buttonName}
         </ButtonSy>
       </ButtonSection>

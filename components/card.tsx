@@ -18,15 +18,17 @@ import {
 } from "../styles/components/card";
 
 interface IProCard {
-  media?: string;
-  buttonName?: string;
-  heading?: string;
-  subHeading?: string;
-  subSubHeading?: string;
-  onButtonClick?: (e?: any) => void;
+  id: string;
+  media: string;
+  buttonName: string;
+  heading: string;
+  subHeading: string;
+  subSubHeading: string;
+  onButtonClick: (id: string) => void;
 }
 
 export const ProCard: FC<IProCard> = ({
+  id,
   media,
   heading,
   subHeading,
@@ -57,7 +59,11 @@ export const ProCard: FC<IProCard> = ({
               <span>{subSubHeading}</span>
             </SubSubHeading>
             <ButtonSection>
-              <Button buttonName={buttonName} onClick={onButtonClick} />
+              <Button
+                retunValue={id}
+                buttonName={buttonName}
+                onClick={onButtonClick}
+              />
             </ButtonSection>
           </ContentBottomSec>
         </BottomSection>
