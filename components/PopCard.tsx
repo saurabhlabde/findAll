@@ -30,6 +30,8 @@ interface IPopCard {
   buttonName: string;
   onButtonClick: () => void;
   onValueChange: (e: any) => void;
+  onAdditionalClick: () => void;
+  onCloseClick: () => void;
 }
 
 export const PopCard: FC<IPopCard> = ({
@@ -41,11 +43,13 @@ export const PopCard: FC<IPopCard> = ({
   onButtonClick,
   buttonName,
   additionalText,
+  onAdditionalClick,
+  onCloseClick,
 }) => {
   return (
     <>
       <PopCardSection>
-        <CloseButtonSection>
+        <CloseButtonSection onClick={onCloseClick ? onCloseClick : undefined}>
           <CloseButtonText>
             <span>Close</span>
           </CloseButtonText>
@@ -78,7 +82,9 @@ export const PopCard: FC<IPopCard> = ({
 
           {additional && (
             <AdditionalInfo>
-              <AdditionalInfoText>
+              <AdditionalInfoText
+                onClick={onAdditionalClick ? onAdditionalClick : undefined}
+              >
                 <span>{additionalText}</span>
               </AdditionalInfoText>
             </AdditionalInfo>

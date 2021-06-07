@@ -1,9 +1,17 @@
-import { useState } from "react";
+import { Dispatch, FC, SetStateAction, useState } from "react";
 
 // component
 import { PopCard } from "../../components/PopCard";
 
-export const RegisterIndex = () => {
+interface IRegisterIndex {
+  setLogin: Dispatch<SetStateAction<boolean>>;
+  setRegister: Dispatch<SetStateAction<boolean>>;
+}
+
+export const RegisterIndex: FC<IRegisterIndex> = ({
+  setLogin,
+  setRegister,
+}) => {
   const [registerValue, setRegisterValue] = useState({
     firstname: "",
     lastname: "",
@@ -55,6 +63,15 @@ export const RegisterIndex = () => {
     console.log("register...");
   };
 
+  const closeHandel = () => {
+    setRegister(false);
+  };
+
+  const additionalHandel = () => {
+    setRegister(false);
+    setLogin(true);
+  };
+
   return (
     <PopCard
       buttonName={"SIGN IN"}
@@ -64,6 +81,8 @@ export const RegisterIndex = () => {
       props={inputValue}
       additional={true}
       additionalText={"LOG IN"}
+      onAdditionalClick={additionalHandel}
+      onCloseClick={closeHandel}
     />
   );
 };

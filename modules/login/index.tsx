@@ -1,9 +1,14 @@
-import { useState } from "react";
+import { Dispatch, FC, SetStateAction, useState } from "react";
 
 // component
 import { PopCard } from "../../components/PopCard";
 
-export const LoginIndex = () => {
+interface ILoginIndex {
+  setLogin: Dispatch<SetStateAction<boolean>>;
+  setRegister: Dispatch<SetStateAction<boolean>>;
+}
+
+export const LoginIndex: FC<ILoginIndex> = ({ setLogin, setRegister }) => {
   const [loginValue, setLoginValue] = useState({
     username: "",
     password: "",
@@ -37,6 +42,15 @@ export const LoginIndex = () => {
     console.log("login...");
   };
 
+  const closeHandel = () => {
+    setLogin(false);
+  };
+
+  const additionalHandel = () => {
+    setLogin(false);
+    setRegister(true);
+  };
+
   return (
     <PopCard
       buttonName={"LOG IN"}
@@ -46,6 +60,8 @@ export const LoginIndex = () => {
       props={inputValue}
       additional={true}
       additionalText={"SIGN UP"}
+      onAdditionalClick={additionalHandel}
+      onCloseClick={closeHandel}
     />
   );
 };
