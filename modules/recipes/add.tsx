@@ -1,4 +1,6 @@
 import { FC, useState } from "react";
+
+// component
 import { PopCard } from "../../components/PopCard";
 
 interface IAddRecipes {
@@ -49,6 +51,9 @@ export const AddRecipes: FC<IAddRecipes> = ({ onClose }) => {
       onCloseClick={onClose}
       onValueChange={handelAddValueChange}
       props={inputFrom}
+      showMedia={true}
+      media={addMedia}
+      setMedia={setAddMedia}
     />
   );
 };

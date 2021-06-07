@@ -1,4 +1,6 @@
 import { FC, useState } from "react";
+
+// component
 import { PopCard } from "../../components/PopCard";
 
 interface IAddFood {
@@ -12,7 +14,7 @@ export const AddFood: FC<IAddFood> = ({ onClose }) => {
     schedule: "",
   });
 
-  const [addMedia, setAddMedia] = useState(null);
+  const [addMedia, setAddMedia] = useState("");
 
   const inputFrom = [
     {
@@ -51,6 +53,9 @@ export const AddFood: FC<IAddFood> = ({ onClose }) => {
     <PopCard
       buttonName={"ADD"}
       heading={"Add Food"}
+      media={addMedia}
+      setMedia={setAddMedia}
+      showMedia={true}
       onButtonClick={addFoodHandel}
       onCloseClick={onClose}
       onValueChange={handelAddValueChange}

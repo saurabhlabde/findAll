@@ -1,10 +1,11 @@
 // component
-import { FC } from "react";
+import { FC, Dispatch, SetStateAction } from "react";
 import OutsideClickHandler from "react-outside-click-handler";
 
 //component
 import { Button } from "../components/Button";
 import { Input } from "../components/Input";
+import { MediaIndex } from "../modules/media";
 
 // style
 import {
@@ -27,7 +28,9 @@ interface IPopCard {
     placeholder: string;
   }>;
   heading: string;
-  media?: boolean;
+  media?: string;
+  setMedia?: Dispatch<SetStateAction<string>>;
+  showMedia?: boolean;
   buttonName: string;
   additional?: boolean;
   additionalText?: string;
@@ -43,6 +46,8 @@ export const PopCard: FC<IPopCard> = ({
   additional,
   heading,
   media,
+  setMedia,
+  showMedia,
   onButtonClick,
   buttonName,
   additionalText,
@@ -69,6 +74,7 @@ export const PopCard: FC<IPopCard> = ({
             </HeadingSection>
 
             <InputSection>
+              {showMedia && <MediaIndex media={media} setMedia={setMedia} />}
               {props?.map((val: any, i: number) => {
                 return (
                   <Input

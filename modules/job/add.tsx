@@ -1,4 +1,6 @@
 import { FC, useState } from "react";
+
+// component
 import { PopCard } from "../../components/PopCard";
 
 interface IAddJob {
@@ -11,7 +13,7 @@ export const AddJob: FC<IAddJob> = ({ onClose }) => {
     location: "",
   });
 
-  const [addMedia, setAddMedia] = useState(null);
+  const [addMedia, setAddMedia] = useState("");
 
   const inputFrom = [
     {
@@ -49,6 +51,9 @@ export const AddJob: FC<IAddJob> = ({ onClose }) => {
       onCloseClick={onClose}
       onValueChange={handelAddValueChange}
       props={inputFrom}
+      showMedia={true}
+      media={addMedia}
+      setMedia={setAddMedia}
     />
   );
 };
