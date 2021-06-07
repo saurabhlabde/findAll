@@ -15,7 +15,7 @@ export const JobIndex = () => {
   return (
     <>
       <IndexSection>
-        <Heading heading={"FindJob"} />
+        <Heading heading={"FindJob"} add={true} />
         <CardSection>
           {jobData?.map((props: any) => {
             return (

@@ -3,6 +3,7 @@ import { IndexSection, CardSection } from "../../styles/modules/index";
 // component
 import { Heading } from "../../components/Heading";
 import { ProCard } from "../../components/Card";
+import { AddProCard } from "../../components/AddCard";
 
 // data
 import foodData from "../../data/food.json";
@@ -15,7 +16,7 @@ export const FoodIndex = () => {
   return (
     <>
       <IndexSection>
-        <Heading heading={"FoDo"} />
+        <Heading heading={"FoDo"} add={true} />
         <CardSection>
           {foodData?.map((props: any) => {
             return (

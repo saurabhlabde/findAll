@@ -15,7 +15,7 @@ export const RecipesIndex = () => {
   return (
     <>
       <IndexSection>
-        <Heading heading={"Recipo"} />
+        <Heading heading={"Recipo"} add={true} />
         <CardSection>
           {recipoData?.map((props: any) => {
             return (

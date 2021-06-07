@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { DFJCS } from "../global";
+import { DFC, DFJCS } from "../global";
 
 export const HeadingSection = styled(DFJCS)`
   width: 100%;
@@ -10,4 +10,17 @@ export const HeadingSection = styled(DFJCS)`
 
 export const HeadingText = styled.h1`
   font-size: 1.2em;
+`;
+
+export const AddSection = styled(DFC)`
+  background-color: ${(props) => props.theme.secondary};
+  padding: 0.5rem 1rem;
+  border-radius: 1em;
+  margin: 0 0.5rem;
+  cursor: pointer;
+`;
+
+export const AddText = styled.h1`
+  color: ${(props) => props.theme.t_orange};
+  font-size: 0.9em;
 `;

@@ -1,5 +1,8 @@
 // component
 import { FC } from "react";
+import OutsideClickHandler from "react-outside-click-handler";
+
+//component
 import { Button } from "../components/Button";
 import { Input } from "../components/Input";
 
@@ -55,41 +58,45 @@ export const PopCard: FC<IPopCard> = ({
           </CloseButtonText>
         </CloseButtonSection>
 
-        <PopCardSec>
-          <HeadingSection>
-            <HeadingText>
-              <span>{heading}</span>
-            </HeadingText>
-          </HeadingSection>
+        <OutsideClickHandler
+          onOutsideClick={onCloseClick ? onCloseClick : undefined}
+        >
+          <PopCardSec>
+            <HeadingSection>
+              <HeadingText>
+                <span>{heading}</span>
+              </HeadingText>
+            </HeadingSection>
 
-          <InputSection>
-            {props?.map((val: any, i: number) => {
-              return (
-                <Input
-                  key={i}
-                  name={val.name}
-                  onValueChange={onValueChange}
-                  placeHolder={val.placeholder}
-                  value={val.value}
-                />
-              );
-            })}
-          </InputSection>
+            <InputSection>
+              {props?.map((val: any, i: number) => {
+                return (
+                  <Input
+                    key={i}
+                    name={val.name}
+                    onValueChange={onValueChange}
+                    placeHolder={val.placeholder}
+                    value={val.value}
+                  />
+                );
+              })}
+            </InputSection>
 
-          <ButtonSection>
-            <Button buttonName={buttonName} onClick={onButtonClick} />
-          </ButtonSection>
+            <ButtonSection>
+              <Button buttonName={buttonName} onClick={onButtonClick} />
+            </ButtonSection>
 
-          {additional && (
-            <AdditionalInfo>
-              <AdditionalInfoText
-                onClick={onAdditionalClick ? onAdditionalClick : undefined}
-              >
-                <span>{additionalText}</span>
-              </AdditionalInfoText>
-            </AdditionalInfo>
-          )}
-        </PopCardSec>
+            {additional && (
+              <AdditionalInfo>
+                <AdditionalInfoText
+                  onClick={onAdditionalClick ? onAdditionalClick : undefined}
+                >
+                  <span>{additionalText}</span>
+                </AdditionalInfoText>
+              </AdditionalInfo>
+            )}
+          </PopCardSec>
+        </OutsideClickHandler>
       </PopCardSection>
     </>
   );
