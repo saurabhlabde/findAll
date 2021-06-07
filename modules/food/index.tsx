@@ -3,7 +3,6 @@ import { IndexSection, CardSection } from "../../styles/modules/index";
 // component
 import { Heading } from "../../components/Heading";
 import { ProCard } from "../../components/Card";
-import { AddProCard } from "../../components/AddCard";
 
 // data
 import foodData from "../../data/food.json";
