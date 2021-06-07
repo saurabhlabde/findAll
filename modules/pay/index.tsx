@@ -1,10 +1,16 @@
-import { IndexSection, CardSection } from "../../styles/modules/index";
+import { FC, useState } from "react";
+
+// component
 import { Heading } from "../../components/Heading";
 import { PayCard } from "../../components/PayCard";
 import { BalanceCard } from "../../components/BalanceCard";
-import { useState } from "react";
 
-export const PayIndex = () => {
+// style
+import { IndexSection, CardSection } from "../../styles/modules/index";
+
+interface IJobIndex {}
+
+export const PayIndex: FC<IJobIndex> = ({}) => {
   const [addPayValue, setAddPayValue] = useState("");
   const [sendPayValue, setSendPayValue] = useState("");
 

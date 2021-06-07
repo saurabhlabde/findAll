@@ -10,18 +10,18 @@ import {
 
 interface IHeading {
   heading: string;
-  style?: any;
   add?: boolean;
+  addClick?: () => void;
 }
 
-export const Heading: FC<IHeading> = ({ heading, style, add }) => {
+export const Heading: FC<IHeading> = ({ heading, add, addClick }) => {
   return (
     <>
       <HeadingSection>
         <HeadingText>{heading}</HeadingText>
 
         {add && (
-          <AddSection>
+          <AddSection onClick={addClick ? addClick : undefined}>
             <AddText>Add</AddText>
           </AddSection>
         )}

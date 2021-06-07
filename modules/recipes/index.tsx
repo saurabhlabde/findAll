@@ -1,13 +1,20 @@
-import { IndexSection, CardSection } from "../../styles/modules/index";
+import { FC } from "react";
 
 // component
 import { Heading } from "../../components/Heading";
 import { ProCard } from "../../components/Card";
 
+// style
+import { IndexSection, CardSection } from "../../styles/modules/index";
+
 // data
 import recipoData from "../../data/recipo.json";
 
-export const RecipesIndex = () => {
+interface IRecipesIndex {
+  addClick: () => void;
+}
+
+export const RecipesIndex: FC<IRecipesIndex> = ({ addClick }) => {
   const buttonName: string = "SAVE";
 
   const buttonHandel = (id: string) => {};
@@ -15,7 +22,7 @@ export const RecipesIndex = () => {
   return (
     <>
       <IndexSection>
-        <Heading heading={"Recipo"} add={true} />
+        <Heading heading={"Recipo"} add={true} addClick={addClick} />
         <CardSection>
           {recipoData?.map((props: any) => {
             return (

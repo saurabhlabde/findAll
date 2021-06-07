@@ -28,12 +28,12 @@ interface IPopCard {
   }>;
   heading: string;
   media?: boolean;
+  buttonName: string;
   additional?: boolean;
   additionalText?: string;
-  buttonName: string;
+  onAdditionalClick?: () => void;
   onButtonClick: () => void;
   onValueChange: (e: any) => void;
-  onAdditionalClick: () => void;
   onCloseClick: () => void;
 }
 

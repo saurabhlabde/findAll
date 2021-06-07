@@ -7,7 +7,11 @@ import { ProCard } from "../../components/Card";
 // data
 import foodData from "../../data/food.json";
 
-export const FoodIndex = () => {
+interface IFoodIndex {
+  addClick: () => void;
+}
+
+export const FoodIndex = ({ addClick }) => {
   const buttonName: string = "ORDER";
 
   const buttonHandel = (id: string) => {};
@@ -15,7 +19,7 @@ export const FoodIndex = () => {
   return (
     <>
       <IndexSection>
-        <Heading heading={"FoDo"} add={true} />
+        <Heading heading={"FoDo"} add={true} addClick={addClick} />
         <CardSection>
           {foodData?.map((props: any) => {
             return (
