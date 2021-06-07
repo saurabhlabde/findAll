@@ -12,12 +12,15 @@ import jobData from "../../data/job.json";
 
 interface IJobIndex {
   addClick: () => void;
+  onButtonClick: () => void;
 }
 
-export const JobIndex: FC<IJobIndex> = ({ addClick }) => {
+export const JobIndex: FC<IJobIndex> = ({ addClick, onButtonClick }) => {
   const buttonName: string = "APPLY";
 
-  const buttonHandel = (id: string) => {};
+  const buttonHandel = (id: string) => {
+    onButtonClick ? onButtonClick() : undefined;
+  };
 
   return (
     <>

@@ -9,12 +9,15 @@ import foodData from "../../data/food.json";
 
 interface IFoodIndex {
   addClick: () => void;
+  onButtonClick: () => void;
 }
 
-export const FoodIndex = ({ addClick }) => {
+export const FoodIndex = ({ addClick, onButtonClick }) => {
   const buttonName: string = "ORDER";
 
-  const buttonHandel = (id: string) => {};
+  const buttonHandel = (id: string) => {
+    onButtonClick ? onButtonClick() : undefined;
+  };
 
   return (
     <>

@@ -12,12 +12,18 @@ import recipoData from "../../data/recipo.json";
 
 interface IRecipesIndex {
   addClick: () => void;
+  onButtonClick: () => void;
 }
 
-export const RecipesIndex: FC<IRecipesIndex> = ({ addClick }) => {
+export const RecipesIndex: FC<IRecipesIndex> = ({
+  addClick,
+  onButtonClick,
+}) => {
   const buttonName: string = "SAVE";
 
-  const buttonHandel = (id: string) => {};
+  const buttonHandel = (id: string) => {
+    onButtonClick ? onButtonClick() : undefined;
+  };
 
   return (
     <>

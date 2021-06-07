@@ -1,15 +1,28 @@
 {
-        "files.exclude": {
-                "**/.git": true,
-                "**/.svn": true,
-                "**/.hg": true,
-                "**/CVS": true,
-                "**/.DS_Store": true,
-                "**/node_modules": true
-        },
-        "cSpell.ignoreWords": [
-                "dfjcs",
-                "firstname",
-                "lastname"
-        ]
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/node_modules": true,
+    "utils": true,
+    "public": true,
+    ".gitignore": true,
+    "next-env.d.ts": true,
+    "package.json": true,
+    "README.md": true,
+    "tsconfig.json": true,
+    "yarn.lock": true,
+    ".vscode": true,
+    ".next": true,
+    "data": true,
+    "pages\\api": true
+  },
+  "cSpell.ignoreWords": [
+    "dfjcs",
+    "firstname",
+    "lastname"
+  ],
+  "workspace.isHidden": true
 }
