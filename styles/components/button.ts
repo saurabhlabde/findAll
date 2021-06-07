@@ -9,10 +9,10 @@ export const ButtonSection = styled.div`
 `;
 
 export const ButtonSy = styled.button`
+  color: ${(props) => props.theme.t_light};
   background-color: transparent;
   height: 100%;
   width: 100%;
   border: none;
-  color: ${(props) => props.theme.t_light};
   cursor: pointer;
 `;

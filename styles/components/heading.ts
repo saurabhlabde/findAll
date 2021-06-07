@@ -9,6 +9,7 @@ export const HeadingSection = styled(DFJCS)`
 `;
 
 export const HeadingText = styled.h1`
+  color:${props => props.theme.t_primary};
   font-size: 1.2em;
 `;
 

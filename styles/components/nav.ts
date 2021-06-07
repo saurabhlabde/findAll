@@ -23,8 +23,8 @@ export const RightSection = styled(DFJCS)`
 export const LogoSection = styled.div``;
 
 export const LogoText = styled.h1`
+  color:${props => props.theme.t_orange};
   font-size: 1.2em;
-  color: orange;
 `;
 
 export const AuthButtonSection = styled(DFJCS)`

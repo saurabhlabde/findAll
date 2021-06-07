@@ -13,6 +13,7 @@ export const BalanceSection = styled(DFJCS)`
 `;
 
 export const BalanceText = styled.h1`
+  color:${props => props.theme.t_primary};
   font-size: 0.9em;
   opacity: 0.8;
 `;

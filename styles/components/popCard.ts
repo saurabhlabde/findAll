@@ -26,7 +26,7 @@ export const HeadingSection = styled.div`
 `;
 
 export const HeadingText = styled.h1`
-  color:${props => props.theme.t_primary}
+  color:${(props) => props.theme.t_primary}
   font-size: 1.3em;
 `;
 
@@ -49,23 +49,23 @@ export const AdditionalInfo = styled.div`
 `;
 
 export const AdditionalInfoText = styled.h1`
+  color: ${(props) => props.theme.t_orange};
   font-size: 0.9em;
   cursor: pointer;
-  color: orange;
 `;
 
 export const CloseButtonSection = styled.div`
   background-color: ${(props) => props.theme.secondary};
   position: absolute;
   top: 0;
-  right:0;
-  transform: translate(-20%,50%);
-  padding:0.5rem 1rem ;
+  right: 0;
+  transform: translate(-20%, 50%);
+  padding: 0.5rem 1rem;
   border-radius: 5em;
   cursor: pointer;
 `;
 
 export const CloseButtonText = styled.h1`
-font-size: 1em;
-color:${props => props.theme.t_primary}
+  color: ${(props) => props.theme.t_primary};
+  font-size: 1em;
 `;

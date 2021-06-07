@@ -26,6 +26,7 @@ export const HeadingSection = styled.div`
 `;
 
 export const Heading = styled.h1`
+  color:${props => props.theme.t_primary};
   font-size: 1em;
 `;
 

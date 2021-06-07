@@ -10,6 +10,7 @@ export const InputSection = styled.div`
 `;
 
 export const InputSy = styled.input`
+  color:${props => props.theme.t_primary};
   background-color: transparent;
   height: 100%;
   width: 100%;
